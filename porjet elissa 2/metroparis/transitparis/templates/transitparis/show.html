@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'transitparis/show.css' %}">
+    <title>Details de votre train</title>
+  </head>
+  <body>
+
+<!-- l'Id est relié à une base de donnée qui associe à chaque chiffre un train différent -->
+    <h1>Train {{ id }}</h1>
+
+<!--     Ce train est lui meme associé dans le meme tableau à une heure de départ et une heure d'arrivée qui sont également affichée lors de l'affichage du train  -->
+    <h2>le premier train part à : {{ debut }}</h2>
+    <h2>le dernier train part à : {{ fin }}</h2>
+
+<!-- L'image aussi -->
+    <img src="{{ imgligne }}" alt="" />
+
+<!-- Next permet de passer à la page suivante et donc à l'ID suivant -->
+    <a href="/transitparis/show/{{ nextID }}"> Next </a>
+  </body>
+</html>

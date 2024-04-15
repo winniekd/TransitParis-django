@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TransitParis</title>
+    <link rel="stylesheet" href="{% static 'transitparis/styles.css' %}" />
+  </head>
+  <body>
+    <!-- Voici tous les booutons qui dirigent vers les details de chaque mode de transport -->
+    <div class="container">
+      <div class="header">
+        <h1>TransitParis</h1>
+        <p>
+          Votre compagnon de voyage pour se déplacer en toute simplicité !
+        </p>
+        <div class="logo">TP</div>
+      </div>
+      <div class="content">
+        <div class="category">
+          <h2>Metros</h2>
+          <ul>
+            <li>Metro 1 <a href="/transitparis/show/1">Détails</a></li>
+            <li>Metro 2 <a href="/transitparis/show/2">Détails</a></li>
+            <li>Metro 3 <a href="/transitparis/show/3">Détails</a></li>
+            <li>Metro 4 <a href="/transitparis/show/4">Détails</a></li>
+            <li>Metro 5 <a href="/transitparis/show/5">Détails</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <h2>RER</h2>
+          <ul>
+            <li>RER A <a href="/transitparis/show/6">Détails</a></li>
+            <li>RER B <a href="/transitparis/show/7">Détails</a></li>
+            <li>RER C <a href="/transitparis/show/8">Détails</a></li>
+            <li>RER D <a href="/transitparis/show/9">Détails</a></li>
+            <li>RER E <a href="/transitparis/show/10">Détails</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <h2>Tramways</h2>
+          <ul>
+            <li>T1 <a href="/transitparis/show/11">Détails</a></li>
+            <li>T2 <a href="/transitparis/show/12">Détails</a></li>
+            <li>T3a <a href="/transitparis/show/13">Détails</a></li>
+            <li>T3b <a href="/transitparis/show/14">Détails</a></li>
+            <li>T4 <a href="/transitparis/show/15">Détails</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <h2>TER</h2>
+          <ul>
+            <li>Lyon <a href="/transitparis/show/16">Détails</a></li>
+            <li>Marseille <a href="/transitparis/show/17">Détails</a></li>
+            <li>Lilles <a href="/transitparis/show/18">Détails</a></li>
+            <li>Rouen <a href="/transitparis/show/19">Détails</a></li>
+            <li>Strasbourg <a href="/transitparis/show/20">Détails</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          Découvrez Paris avec transitParis. Suivez les instructions étape par
+          étape pour visiter les lieux et les stations incontournables de Paris.
+          Consultez les horaires, les prochains départs, les infos trafics en
+          temps réel et les itinéraires des lignes sur la carte.
+        </p>
+      </div>
+    </div>
+    <a class="rand" href="/transitparis/show/{{ random }}">Random</a>
+  </body>
+</html>
